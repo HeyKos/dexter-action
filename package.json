@@ -1,0 +1,24 @@
+{
+  "name": "dexter-action",
+  "version": "1.0.0",
+  "description": "An action for Google Assistant to lookup Pokemon Pokedex data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeyKos/dexter-action.git"
+  },
+  "author": "Mike Koser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeyKos/dexter-action/issues"
+  },
+  "homepage": "https://github.com/HeyKos/dexter-action#readme",
+  "dependencies": {
+    "actions-on-google": "^1.0.8",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
