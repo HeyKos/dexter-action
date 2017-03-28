@@ -1,9 +1,12 @@
 {
-  "versionLabel": "<INSERT YOUR VERSION LABEL HERE>",
+  "versionLabel": "0.1",
   "agentInfo": {
     "languageCode": "en-US",
-    "projectId": "<INSERT YOUR PROJECT ID HERE>",
-    "voiceName": "male_1"
+    "projectId": "durable-river-162820",
+    "voiceName": "male_1",
+    "invocationNames": [
+      "dexter"
+    ]
   },
   "actions": [
     {
@@ -12,24 +15,39 @@
         "intent": "assistant.intent.action.MAIN"
       },
       "httpExecution": {
-        "url": "<INSERT YOUR EXECUTION URL HERE>"
+        "url": "https://us-central1-durable-river-162820.cloudfunctions.net/dexter"
       }
     },
     {
-      "description": "guess a number game",
+      "description": "Ask Dexter to lookup Pokedex data by name.",
       "initialTrigger": {
-        "intent": "START_GUESS_NUMBER",
+        "intent": "raw.input",
         "queryPatterns": [
           {
-            "queryPattern": "find a magic number"
+            "queryPattern": "tell me about $SchemaOrg_Text:pokemon"
           },
           {
-            "queryPattern": "guess a number"
+            "queryPattern": "what is a $SchemaOrg_Text:pokemon"
+          },
+          {
+            "queryPattern": "look up $SchemaOrg_Text:pokemon"
+          },
+          {
+            "queryPattern": "give me information about a $SchemaOrg_Text:pokemon"
+          },
+          {
+            "queryPattern": "describe $SchemaOrg_Text:pokemon"
+          },
+          {
+            "queryPattern": "describe a $SchemaOrg_Text:pokemon"
+          },
+          {
+            "queryPattern": "give me data on $SchemaOrg_Text:pokemon"
           }
         ]
       },
       "httpExecution": {
-        "url": "<INSERT YOUR EXECUTION URL HERE>"
+        "url": "https://us-central1-durable-river-162820.cloudfunctions.net/dexter"
       }
     }
   ]
